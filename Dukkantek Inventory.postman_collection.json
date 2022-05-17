@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "6c25b299-2a01-47dd-b3ef-ce686ec2fc7e",
+		"name": "Dukkantek Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CountProductsByStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeProductStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 2,\r\n    \"productStatus\": \"InStock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/products/change-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"change-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SellProduct",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/products/sell",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"sell"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
